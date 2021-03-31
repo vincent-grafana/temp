@@ -1,15 +1,15 @@
 apiVersion: 1
+
 deleteDatasources:
-  - name: Loki-example
-    orgId: 1
+  - name: loki-vw
 
 datasources:
-- name: Loki-example
+- name: loki-vw
   type: loki
-#  access: proxy
+  access: proxy
   orgId: 1
   url: http://host.docker.internal:3100
-#  database: loki
+  basicAuth: false
   isDefault: true
   version: 1
   editable: false
