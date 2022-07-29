@@ -33,7 +33,7 @@ Availability =  <ins>1 - # of minutes unavailable during March 2022</ins><br>
 
 If you had 3 incidents in the month of March that resulted in 30 minutes of downtime:
 
-Availability =  <ins>1 - 30</ins><br>    
+Availability =  <ins>1 &#x2d; 30</ins><br>    
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44640
 
 Availability =  .9993 or 99.93% for March
@@ -90,4 +90,4 @@ If you don't know what metrics and events you're trying to be aware of, there's 
 
 None of these events are things that happen once or twice, or even just quarterly. They are recurring events that continuously occur (either automated or manually organized) that help reduce the toil of incidents, and in the long run reduce the costs of downtime.
 
-What I am recommending is not a mind-blowing or revolutionary idea. Scaling your reliability practice is not as simple as throwing money at the problem. Buying/using the right tools and hiring the right people are only a part of the solution. Teams need to be given time to "do things the right way". If the end goal is to improve your availability by "another 9" (or even a fraction of a 9), that goal is achieved through various iterations of improvements over time. My SRE teams took a lot of ownership and pride in improving the availability of our various services. We spent the time and effort to define, measure, analyze, and improve the availability and uptime of our sites... because it was our f***ing site, too.
+What I am recommending is not a mind-blowing or revolutionary idea. Scaling your reliability practice is not as simple as throwing money at the problem. Buying/using the right tools and hiring the right people are only a part of the solution. Only doing these steps ends up contribuitng to added technical debt, not giving enough attention to matters that need it the most. Teams need to be given time to "do things the right way". If the end goal is to improve your availability by "another 9" (or even a fraction of a 9), that goal is achieved through various iterations of improvements over time. Teams that invest the time to address and utilze their tooling properly and consistently wil have lower amounts of downtime, and lower costs due from downtime as a result. My SRE teams took a lot of ownership and pride in improving the availability of our various services. We spent the time and effort to define, measure, analyze, and improve the availability and uptime of our sites... because it was our f***ing site, too.
