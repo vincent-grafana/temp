@@ -1,5 +1,14 @@
-# You can't just buy a 9
 ---
+title: You Can't Just Buy a Nine
+summary: | 
+  Sometimes, just throwing money at the problem isn't the solution.
+author: Vince Huang
+socialImage: monkey-in-a-server-room01.png
+cover: monkey-in-a-server-room01.png
+language: en
+tableOfContent: true
+---
+
 ### "It's your f***ing site, too!"
 
 At a former employer, my Vice President of Engineering and Operations had a reputation for his language. He also had a reputation for his deep passion for things like site availability, incidents, downtime, and almost related to making sure the company's website was up and running, and especially that the end users were having a good experience using it.
