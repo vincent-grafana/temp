@@ -1,4 +1,4 @@
-sdsdf# You can't just buy a 9
+# You can't just buy a 9
 ---
 ### "It's your f***ing site, too!"
 
