@@ -47,7 +47,7 @@ But it wasn’t always reliable. In fact, there were a few failures along the wa
 
 Everyone has their own way of doing step 1, and step 3 is always optional (depending on whether or not you intend to build the “perfect product”. But steps 2 and 4 have a lot of flexibility and haven’t always been as consistent as they should be.
 
-### Test for Success and Failures
+## Test for Success and Failures
 
 This sounds obvious, but there’s some caveats to remember - namely around discovering potential failures, and how to properly handle them.
 
@@ -57,15 +57,16 @@ Non-functional tests such as Performance tests validate the operational aspects 
 
 Which leads us to the next phase - addressing the failures and how to handle them.
 
+### Real World Failures - Testing for failures before it matters
 While load testing, you discover your application’s response is sluggish after a certain number of requests per second. The response time is still under the service level thresholds you’ve defined for the duration of your test, so there’s nothing failing or causing alarms. Everything on your checklist passes, and QA validation is complete, right?
 
 But perhaps your test environment is ever so slightly different than your production environment. Perhaps a power fluctuation in the data center that hosts your hardware caused a server rack to become slightly unstable. Maybe a server or cloud administrator accidentally pushed the wrong update to a region, or even to just your production kubernetes cluster. No matter the event that caused an outage, the fact remains that an outage has happened. 
 
-In our previous tests, we were able to identify and define what the upper bound capacity of our systems and software was. On the other end of the spectrum, we should also make the effort to understand the lower bounds of our software and systems. What are the absolute minimum resources necessary to properly handle an outage? If I don’t have those resources available, how does my software handle itself? Does it sit idle and wait? Does it crash and attempt to restart? Maybe it’s designed to retry, but exponentially back off?
+In our previous performance and load tests, we were able to identify and define what the upper bound capacity of our systems and software was. On the other end of the spectrum, we should also make the effort to understand the lower bounds of our software and systems. What are the absolute minimum resources necessary to properly handle an outage? If I don’t have those resources available, how does my software handle itself? Does it sit idle and wait? Does it crash and attempt to restart? Maybe it’s designed to retry, but exponentially back off?
 
-Testing for these scenarios and how your systems react is sometimes referred to as Chaos or Reliability testing. In Chaos testing, we methodically and systematically introduce failures of varying degrees to discover different characteristics about our software and the systems that support them. Note that “systems” doesn’t just include the hardware where your software is deployed. Systems also includes the on-call and incident management “people systems” that we rely on when things take a turn for the worse. Understanding how your systems respond to adverse events helps you properly plan and ultimately become more reliable. 
+Testing for these scenarios and how your systems react is sometimes referred to as Chaos or Reliability testing. In Chaos testing, we methodically and systematically introduce failures and disruptions of varying degrees to discover different characteristics about our software and the systems that support them. Note that “systems” doesn’t just include the hardware where your software is deployed. Systems also includes the on-call and incident management “people systems” that we rely on when things take a turn for the worse. Understanding how your systems respond to adverse events helps you properly plan and ultimately become more reliable. 
 
-### Automate ALL the things
+## Automate ALL the things
 
 It's important to remember that with so much testing that needs to be done, there are no shortcuts around any of them. All of the functional tests should be performed, and most tests should not be replaced or substituted for another. This is true for chaos testing as well. In fact, in my experience, the teams that execute functional, non-functional, and chaos tests understand more about their systems and software (and have a more pleasant on-call experience) than teams that exclude any one of them - especially chaos tests.
 
@@ -73,23 +74,26 @@ As you can likely imagine, though, that’s a lot of testing. How can someone po
 
 The answer is you can’t. At least not by yourself.
 
-Involve other teams and people 
+## How do we test and automate?
+We’re not really making a burger, right? In general, teams follow these three steps to properly test and automate their software processes to improve reliability.
+
+### Involve other teams and people 
 You (and your team) are only one perspective. In the world of statistics, your sample size (effectively of 1) is too small. History has plenty of examples of products that were originally intended for some other purpose. Listerine was originally a surgical antiseptic. Coca-Cola was a cure for morphine addiction (and included a narcotic, cocaine). Microsoft Windows games, Minesweeper and Freecell, were designed to actually help train people to properly navigate “drag-and-drop”, and right and left-click more naturally. Without additional user input, McDonald’s Special Sauce wouldn’t need to be capitalized when written out.
 
 The point is your experiences and interpretations are limited to your own, and therefore your expectations around user experience, performance, and failures are likely going to be just as limited. Expanding your inputs to include experiences and interpretations of other teams will ensure you have a more complete representation of actual user experiences. What might be tolerable for you may not be tolerable for others, and vice versa as well. 
 
-Script your failures
+### Script your failures
 Very few people enjoy doing any task more than once. Lots of folks I know dislike saying things multiple times. Instead, they’ll write instructions out so the steps can be executed without having to be repeatedly explained. These written instructions can also be shared easily, too. This limits the potential duplication of artifacts, and can mitigate “snowflake”-like instructions that may slightly differ from version to version.On that note, if someone needed to build or modify the instructions, they would be able to do so relatively easily. 
 
 The same concept applies to failure testing efforts. Scripting your failures not only automates the actual execution with a certain consistency, but also allows you to be able to share your scripts and tests with other teams that may also be testing for similar failures and limits. If teams want to modify the scripts to adjust to their own particular needs, they are able to and can then maintain those versions for their particular teams. A Big Mac (and McDonalds as a brand) is generally recognized for some amount of consistency, regardless of which restaurant you visit. The more automation and consistency of your tests, the more reliable your expected results should be.
 
-80/20 rule
+### Follow the 80/20 rule
 Perhaps you’ve heard of the Pareto Principle (the 80/20 rule), but if you’re not familiar with it, that’s ok. In a reliability computing environment, we believe that 80% of errors and failures are caused by the top 20% of bugs. 
 
 Nobody is perfect, and no code or system will ever be flawless. Flawless code and systems result in an uptime calculation of 100%, and if you do the math, that’s no easy achievement. You can improve your reliability and expectations by addressing the top 20% of your issues. Once those are addressed, re-examine your issues and prioritize the next top 20%. 
 
-Conclusion
-At the end of the day, we’ve still made our hamburger, and people recognize our hamburger. It has grown a reputation for being reliable because we’ve tested it, made improvements, and automated our efforts for consistency. With the right practices and processes behind us, our hamburger can be reliably reliable.
+## Conclusion
+At the end of the day, we actually still have made our hamburger, and people recognize our hamburger. It has grown a reputation for being reliable because we’ve tested it, made improvements, and automated our efforts for consistency. With the right practices and processes behind us, our hamburger can be reliably reliable.
 
 
 
