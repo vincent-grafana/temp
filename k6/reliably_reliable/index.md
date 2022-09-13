@@ -8,6 +8,8 @@ cover: croc_eating_a_big_mac.png
 language: en
 tableOfContent: false
 ---
+## The Definition of Reliable
+
 I Google’d the word “[reliable](https://www.google.com/search?q=reliable)” the other day.
 
 At the top of the results page was a definition from the Oxford Languages dictionary.
