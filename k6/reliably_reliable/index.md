@@ -8,16 +8,17 @@ cover: croc_eating_a_big_mac.png
 language: en
 tableOfContent: false
 ---
-I Google’d the word “reliable” the other day.
+I Google’d the word “[reliable](https://www.google.com/search?q=reliable)” the other day.
 
 At the top of the results page was a definition from the Oxford Languages dictionary.
 
-adjective
-consistently good in quality or performance; able to be trusted.
-"a reliable source of information"
-noun
-a person or thing with trustworthy qualities.
-"the supporting cast includes old reliables like Mitchell"
+> *adjective*
+> 1. consistently good in quality or performance; able to be trusted.
+> "a reliable source of information"
+
+> *noun*
+> 1. a person or thing with trustworthy qualities.
+> "the supporting cast includes old reliables like Mitchell"
 
 I started thinking, what’s “reliable”? I glanced at my mobile phone. I felt it was pretty reliable. I can make and receive calls, I play games, battery life is pretty decent, photos are amazing… But it’s kind of new, so maybe that doesn’t count. It’s not really reliable, the jury’s still out. It’s just new.
 
@@ -25,37 +26,28 @@ Then I started thinking about other things, and even people. My parents are reli
 
 A McDonald’s Big Mac.
 
-A marketing “Jingle” from 1975:
-Two All Beef Patties, Special Sauce, Lettuce, Cheese, Pickles, Onions on a Sesame Seed Bun”
-
-
+![bigmac_image](1024px-BigMacButton1975.png)
 Image from https://en.wikipedia.org/wiki/Big_Mac
+
+The jingle read:
+> "Two All Beef Patties, Special Sauce, Lettuce, Cheese, Pickles, Onions on a Sesame Seed Bun”
 
 
 If you’ve ever ordered a Big Mac from McDonald’s, you’ve probably experienced the reliability of the burger. It’s been around since 1967! That’s a 55 year old product. There have been various spin-offs, but for the most part, the Big Mac today is almost identical to the Big Mac of the 1960’s. In fact, the ingredients and product have been so consistent for such a long time that global economists now use “The Big Mac Index” to measure purchasing power among the different countries. 
 
 But it wasn’t always reliable. In fact, there were a few failures along the way. But eventually, they got it right. In a way, software development isn’t much different.
 
-Step
-McDonald’s
-Software Dev, Inc.
-1.
-Put a sandwich together
-Build a product/feature
-2.
-Eat it yourself (or get others to eat it)
-Test (in Prod?) for success and failures
-3.
-Improve and perfect the special sauce
-Implement changes based on feedback
-4.
-Be consistent when making them
-Automate all the things
+| Step | McDonald’s | Software Dev, Inc. |
+| ---- | ---------- | ------------------ |
+| 1. | Put a sandwich together | Build a product/feature |
+| 2. | Eat it yourself (or get others to eat it) | Test (in Prod?) for success and failures |
+| 3. | Improve and perfect the special sauce | Implement changes based on feedback |
+| 4. | Be consistent when making them | Automate all the things |
 
 
 Everyone has their own way of doing step 1, and step 3 is always optional (depending on whether or not you intend to build the “perfect product”. But steps 2 and 4 have a lot of flexibility and haven’t always been as consistent as they should be.
 
-Test for Success and Failures
+### Test for Success and Failures
 
 This sounds obvious, but there’s some caveats to remember - namely around discovering potential failures, and how to properly handle them.
 
@@ -73,8 +65,7 @@ In our previous tests, we were able to identify and define what the upper bound 
 
 Testing for these scenarios and how your systems react is sometimes referred to as Chaos or Reliability testing. In Chaos testing, we methodically and systematically introduce failures of varying degrees to discover different characteristics about our software and the systems that support them. Note that “systems” doesn’t just include the hardware where your software is deployed. Systems also includes the on-call and incident management “people systems” that we rely on when things take a turn for the worse. Understanding how your systems respond to adverse events helps you properly plan and ultimately become more reliable. 
 
-
-Automate ALL the things
+### Automate ALL the things
 
 It's important to remember that with so much testing that needs to be done, there are no shortcuts around any of them. All of the functional tests should be performed, and most tests should not be replaced or substituted for another. This is true for chaos testing as well. In fact, in my experience, the teams that execute functional, non-functional, and chaos tests understand more about their systems and software (and have a more pleasant on-call experience) than teams that exclude any one of them - especially chaos tests.
 
